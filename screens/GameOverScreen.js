@@ -8,7 +8,7 @@ import Colors from '../constants/colors';
 
 const GameOverScreen = props => {
   return (
-    <ScrollView contentContainerStyle={{flex: 1}}>
+    <ScrollView>
       <View style={styles.screen}>
         <TitleText>The Game is Over!</TitleText>
         <View style={styles.imageContainer}>
@@ -28,9 +28,7 @@ const GameOverScreen = props => {
             <Text style={styles.highlight}>{props.userNumber}</Text>.
           </BodyText>
         </View>
-        <MainButton onPress={props.onRestart}>
-          NEW GAME
-        </MainButton>
+        <MainButton onPress={props.onRestart}>NEW GAME</MainButton>
       </View>
     </ScrollView>
   );
@@ -40,7 +38,8 @@ const styles = StyleSheet.create({
   screen: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    paddingVertical: 10
   },
   imageContainer: {
     // width: 300,
